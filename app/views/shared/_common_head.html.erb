@@ -1,0 +1,37 @@
+<title><%= title_tag %></title>
+
+<% if @camp.try(:persisted?) %>
+  <meta name="og:title" content="<%= @camp.og_title %>" />
+  <meta name="og:url" content="<%= camp_url(@project, protocol: 'https') %>" />
+  <meta name="og:image" content="" />
+  <meta name="og:description" content="Come join camp <%= @project.name %> on GoodNaps. <%= @camp.microwave %>"/>
+
+<% else %>
+  <meta name="og:title" content="GoodNap: Find a camp and get some naps" />
+  <meta name="og:url" content="https://www.goodnaps.com/" />
+  <!-- <meta name="og:image" content="" /> -->
+  <meta name="og:description" content="Don't be left out while camping out. Create a camp, invite your friends, organize and party!"/>
+<% end %>
+
+<!-- <meta name="google-site-verification" content="bFbq4jNvHVioHo7FPq8iSY9HFFn3wY1_jM87o37OFKY" /> -->
+<!-- <link rel="shortcut icon" href="#" /> -->
+
+<%= stylesheet_link_tag "application" %>
+<% if current_user %>
+  <%= stylesheet_link_tag "user" %>
+<% end %>  
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<%= javascript_include_tag "application" %>
+
+<% if current_user %>
+  <%= javascript_include_tag "user" %>
+<% end %>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">

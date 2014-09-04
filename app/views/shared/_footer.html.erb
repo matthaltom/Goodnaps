@@ -1,0 +1,43 @@
+<footer>
+	<div class="container">
+    <div class="row">
+      <div class="col-md-2">
+        <div class="col-md-stack-space"></div> 
+        <h4>GoodNaps</h4>
+        <ul>
+          <li><%= link_to 'Home', '/' %></li>
+          <li><%= link_to 'Create a Camp', create_camp_path %></li>
+          <li><%= link_to 'Join a Camp', join_camp_path %></li> 
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <div class="col-md-stack-space"></div> 
+        <h4>Get Social</h4>
+        <ul>
+          <li><%= link_to 'Twitter', 'http://twitter.com/goodnapsapp', target: :blank %><li>
+          <li><%= link_to 'Facebook', 'http://facebook.com/goodnaps', target: :blank %><li>
+        </ul>
+      </div>
+      
+      <div class="col-md-2">
+        <div class="col-md-stack-space"></div> 
+        <h4>Company</h4>
+        <ul>
+          <li><%= link_to 'About', about_path %></li>
+          <li><a class="help-box hlinks" data-toggle="modal" data-target="#help-box" href="#">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row last-links">
+      <div class="col-md-12">
+        <div class="col-md-stack-space"></div> 
+        <p>&copy; GoodNap <%= Time.now.year %> an Another Color Company
+        <a href="http://www.entrepreneurialbynature.com/" target="_blank">
+          <i class="ss-icon ss-gizmo ss-location"></i> Made in colorful Colorado
+        </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>

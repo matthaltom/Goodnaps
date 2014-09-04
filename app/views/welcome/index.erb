@@ -1,6 +1,16 @@
-<h1>Getting Started with Ruby</h1>
+<!DOCTYPE html>
+<html ng-app lang="en">
+  <head>
+    <%= render 'shared/common_head' %> 
+    <%= yield :head %>
+    <%= csrf_meta_tags %>
+  </head>
 
-<p>
-  Welcome! This is a test
-</p>
+  <body <%= body_spy.html_safe %> class="<%= body_class %> <%= extra_body_class %> <%= yield :body_class %> <%= body_state_classes %>">
+    <%= content_for?(:content) ? yield(:content) : yield %>
 
+    <div class="md-overlay"></div>
+    <%= javascript_include_tag :codrop %>
+    <%= render partial: 'shared/google' %>
+  </body>
+</html>

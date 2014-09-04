@@ -1,0 +1,16 @@
+.bundle
+/log/*.log
+/tmp
+
+.*.swp
+.DS_Store
+
+dropbox
+prework
+bookit
+
+.powrc
+.powenv
+.rvmrc
+
+.validation
